@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <title>Interactive Card</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="card-container">
+        <div class="card card-front">
+          <img class="card-logo" src="images/card-logo.svg" alt="card logo"/>
+          <span id="card-number" class="card-number">0000 0000 0000 0000</span>
+          <span id="card-name" class="card-name">JANE APPLESSEED</span>
+          <div class="card-date">
+            <span id="card-month" class="card-month">00</span>
+            <span>/</span>
+            <span id="card-year" class="card-year">00</span>
+          </div>
+        </div>
+        <div class="card card-back">
+          <span id="card-cvc" class="card-cvc">000</span>
+        </div>
+      </div>
+      <div class="form-container">
+        <form id="form">
+          <div class="form-field">
+            <label for="name" class="form-label">CARDHOLDER NAME</label>
+            <input type="text" name="name" id="name" class="form-input" placeholder="e.g. Jane Appleseed" />
+            <span id="name-error" class="hide">El nombre no es válido</span>
+          </div>
+          <div class="form-field">
+            <label for="number" class="form-label">CARD NUMBER</label>
+            <input
+              type="text"
+              name="number"
+              id="number"
+              class="form-input"
+              placeholder="e.g. 1234 5678 9123 0000"
+              maxlength="16"
+            />
+            <span id="number-error" class="hide">El número no es válido</span>
+          </div>
+          <div class="form-last">
+            <div class="form-date">
+              <span class="form-label">EXP. DATE (MM/YY)</span>
+              <div class="form-date-inputs">
+                <input
+                  type="text"
+                  name="month"
+                  id="month"
+                  class="form-input form-input-small"
+                  placeholder="MM"
+                  maxlength="2"
+                />
+                <input
+                  type="text"
+                  name="year"
+                  id="year"
+                  class="form-input form-input-small"
+                  placeholder="YY"
+                  maxlength="2"
+                />
+              </div>
+              <span id="month-error" class="hide">El mes no es válido</span>
+              <span id="year-error" class="hide">El año no es válido</span>
+            </div>
+            <div>
+              <label for="cvc" class="form-label">CVC</label>
+              <input
+                type="text"
+                name="cvc"
+                id="cvc"
+                class="form-input form-input-medium"
+                placeholder="123"
+                maxlength="3"
+              />
+              <span id="cvc-error" class="hide">El CVC no es válido</span>
+            </div>
+          </div>
+          <button class="button">Confirm</button>
+        </form>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

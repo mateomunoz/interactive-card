@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1440px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.card-container {
+  position: relative;
+  height: 240px;
+  background-image: url(../images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .card-container {
+    width: 483px;
+    height: 100vh;
+  }
+}
+
+.card {
+  position: absolute;
+  width: 286px;
+  height: 157px;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 447px;
+    height: 245px;
+  }
+}
+
+.card-front {
+  top: 126px;
+  left: 16px;
+  background-image: url(../images/bg-card-front.png);
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .card-front {
+    top: 187px;
+    left: 164px;
+  }
+}
+
+.card-front > *,
+.card-back > * {
+  position: absolute;
+}
+
+.card-logo {
+  top: 17px;
+  left: 19px;
+  width: 54px;
+}
+
+.card-number {
+  top: 84px;
+  left: 19px;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-number {
+    top: 139px;
+    left: 32px;
+    font-size: 28px;
+  }
+}
+
+.card-name {
+  top: 124px;
+  left: 19px;
+  font-size: 9px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-name {
+    top: 200px;
+    left: 32px;
+    font-size: 14px;
+  }
+}
+
+.card-date {
+  top: 124px;
+  right: 20px;
+  font-size: 9px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-date {
+    top: 200px;
+    left: 365px;
+    font-size: 14px;
+  }
+}
+
+.card-back {
+  top: 32px;
+  right: 16px;
+  background-image: url(../images/bg-card-back.png);
+}
+
+@media screen and (min-width: 768px) {
+  .card-back {
+    top: 469px;
+    left: 258px;
+  }
+}
+
+.card-cvc {
+  font-size: 9px;
+  top: 73px;
+  right: 37px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-cvc {
+    top: 111px;
+    left: 358px;
+    font-size: 14px;
+  }
+}
+
+.form-container {
+  position: relative;
+  top: 97px;
+  width: 327px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .form-container {
+    top: 0;
+  }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.form-last {
+  display: flex;
+  font-size: 12px;
+  margin-bottom: 28px;
+}
+
+.form-date-inputs {
+  display: flex;
+  gap: 8px;
+  margin-right: 11px;
+}
+
+.form-label {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: #21092f;
+  font-weight: bold;
+}
+
+.form-input {
+  height: 45px;
+  padding-left: 16px;
+  border-radius: 8px;
+  border: none;
+  border: 1px solid #898989;
+}
+
+.form-input-medium {
+  width: 164px;
+}
+
+.form-input-small {
+  width: 72px;
+}
+
+.button {
+  width: 100%;
+  height: 53px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  background-color: #21092f;
+  font-family: inherit;
+}
+
+.hide {
+  display: none;
+}
